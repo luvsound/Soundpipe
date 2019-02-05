@@ -127,11 +127,7 @@ wavout \
 wpkorg35 \
 zitarev
 
-ifndef NO_LIBSNDFILE
-	MODULES += diskin
-else
-	CFLAGS += -DNO_LIBSNDFILE
-endif
+CFLAGS += -DNO_LIBSNDFILE
 
 # ini parser needed for nsmp module
 include lib/inih/Makefile
@@ -161,4 +157,4 @@ include lib/dr_wav/Makefile
 CFLAGS += -fPIC -g
 
 # Uncomment this to use double precision
-#USE_DOUBLE=1
+USE_DOUBLE=1
